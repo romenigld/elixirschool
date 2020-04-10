@@ -80,7 +80,7 @@ O mais eficiente, e ideal, método de recuperar dados é a busca por chave. Enqu
 
 ### Pesquisa de chave
 
-Dado uma chave, podemos usar `lookup/2` para recuperar todos os registos com esta chave:
+Dado uma chave, podemos usar `lookup/2` para recuperar todos os registros com esta chave:
 
 ```elixir
 iex> :ets.lookup(:user_lookup, "doomspork")
@@ -109,7 +109,7 @@ iex> :ets.match(:user_lookup, {:"$99", :"$1", :"$3"})
  ["", ["Elixir", "Ruby", "JavaScript"], "3100"]]
 ```
 
-O que se queremos nosso objeto original e não uma lista? Podemos usar `match_object/2`, que independentemente das variáveis retorna nosso objeto inteiro:
+E se queremos nosso objeto original e não uma lista? Podemos usar `match_object/2`, que independentemente das variáveis retorna nosso objeto inteiro:
 
 ```elixir
 iex> :ets.match_object(:user_lookup, {:"$1", :"_", :"$3"})
